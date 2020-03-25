@@ -3,11 +3,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import 'tachyons'
+import '@zeit-ui/style'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+const MODE = '!REACT'
 
-InboxSDK.load(2, 'sdk_superconnect_af254a2366').then(({Global}) => {
+if (MODE === 'REACT') {
+  ReactDOM.render(<App />, document.getElementById('root'));  
+} else {
+  InboxSDK.load(2, 'sdk_superconnect_af254a2366').then(({Global}) => {
 
   // Compose.registerComposeViewHandler((composeView) => {
 
@@ -34,6 +40,7 @@ InboxSDK.load(2, 'sdk_superconnect_af254a2366').then(({Global}) => {
     el
   })
 });
+}
 
 
 
