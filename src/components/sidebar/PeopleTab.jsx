@@ -1,21 +1,8 @@
 import React from 'react';
-import Logo from './images/sapling.png'
 
-
-export const  Header = (props) => {
+function People() {
   return (
-    <div className='bb b--black-10  flex items-center justify-center' style={{height:'64px'}}>
-        <img class="w2 h2  br-100" src={Logo} />
-    </div>
-  );
-}
-
-
-function App() {
-  return (
-    <div className="center ma0 pa0 w-100 black-70" style={{width: '300px'}}>
-      <Header></Header>
-      <main className='ma3'>
+    <section className='ma3'>
       <div class="black-70 w-100">
     <dl class="fl fn-l w-50 dib-l w-auto-l lh-title mr5-l ">
       <dd class="f6 fw4 ml0">People</dd>
@@ -87,13 +74,8 @@ function App() {
     <i class="suffix zi-icon-up"></i>
   </button>
 </div>
-<div class="zi-switcher w-100 flex justify-center mt4">
-  <a class="o-50">Reminders</a>
-  <a class="active">People</a>
-</div>
-</main>
-    </div>
+</section>
   );
 }
 
-export default App;
+export default People;
